@@ -45,7 +45,7 @@ export default function  CommentDialog({open, setOpen})  {
    
    const commentHandler = async () => {
       try {
-         const res = await axios.post(`/api/v1/post/${selectedPost._id}/comment`, {text}, {
+         const res = await axios.post(`https://instadebo.onrender.com/api/v1/post/${selectedPost._id}/comment`, {text}, {
             headers: {
                'Content-Type': 'application/json'
             },
