@@ -35,7 +35,7 @@ export default function Login() {
       e.preventDefault();
       try {
          setLoading(true);
-         const res = await axios.post('/api/v1/user/login', input, {
+         const res = await axios.post('https://instadebo.onrender.com/api/v1/user/login', input, {
             header:{
                'Content-Type': 'application/json'
             },
