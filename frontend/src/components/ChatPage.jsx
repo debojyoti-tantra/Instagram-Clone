@@ -24,7 +24,7 @@ export default function ChatPage() {
    
    const sendMessageHandler = async (reciverId) => {
       try {
-         const res = await axios.post(`/api/v1/message/send/${reciverId}`, { textMessage }, {
+         const res = await axios.post(`https://instadebo.onrender.com/api/v1/message/send/${reciverId}`, { textMessage }, {
             headers:{
                'Content-Type':'application/json'
             },
