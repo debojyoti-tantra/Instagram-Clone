@@ -11,7 +11,7 @@ const useGetAllMessage = () => {
    useEffect(() => {  
       const fetchAllMessage = async () => {
          try {
-            const res = await axios.get(`/api/v1/message/${chatSelectedUser._id}`, {withCredentials:true});
+            const res = await axios.get(`https://instadebo.onrender.com/api/v1/message/${chatSelectedUser._id}`, {withCredentials:true});
             console.log(res);
             if (res.data.success)  {
                dispatch(setMessages(res.data.messages));
