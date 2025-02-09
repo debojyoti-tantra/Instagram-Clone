@@ -66,7 +66,8 @@ function App() {
       if (user) {
          const socketio = io('https://instadebo.onrender.com', {
             query: {
-               userId: user?._id
+               userId: user?._id,
+               username: user?.username
             },
             transports:['websocket']
          });
