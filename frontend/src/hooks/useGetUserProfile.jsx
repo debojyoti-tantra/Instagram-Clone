@@ -9,7 +9,7 @@ const useGetUserProfile = (username) => {
    useEffect(() => {  
       const fetchUserProfile = async () => {
          try {
-            const res = await axios.get(`/api/v1/user/${username}/profile`, {withCredentials:true});
+            const res = await axios.get(`https://instadebo.onrender.com/api/v1/user/${username}/profile`, {withCredentials:true});
             if (res.data.success)  {
                dispatch(setUserProfile(res.data.user));
             }
