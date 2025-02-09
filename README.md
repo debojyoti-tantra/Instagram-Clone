@@ -1,20 +1,20 @@
-# ðŸ“¸ InstaDebo â€“ Instagram Clone (MERN Stack)
+# InstaDebo Instagram Clone (MERN Stack)
 
 InstaDebo is a full-featured **Instagram clone** built with the **MERN stack (MongoDB, Express, React, Node.js)**. 
 It allows users to **upload photos, like, comment, follow/unfollow, update profiles, and explore posts**â€”all in a seamless social media experience.
 
-## ðŸš€ Features:
-- âœ… User authentication (JWT & Firebase)
-- âœ… Profile updates (profile picture, bio, etc.)
-- âœ… Post creation, likes & comments
-- âœ… Follow/unfollow system
-- âœ… Real-time updates with Socket.IO
-- âœ… Responsive & modern UI
+## Features:
+- User authentication (JWT & Firebase)
+- Profile updates (profile picture, bio, etc.)
+- Post creation, likes & comments
+- Follow/unfollow system
+- Real-time updates with Socket.IO
+- Responsive & modern UI
 
-## ðŸ“¸ Screenshots:
+## Screenshots:
 (Add screenshots here)
 
-## ðŸ”§ Technologies Used:
+## Technologies Used:
 - MongoDB (Database)
 - Express.js (Backend framework)
 - React.js (Frontend framework)
@@ -23,10 +23,10 @@ It allows users to **upload photos, like, comment, follow/unfollow, update profi
 - Socket.IO (For real-time updates)
 - Tailwind CSS (For UI styling)
 
-## ðŸš€ Installation & Setup
+## Installation & Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/InstaDebo.git
+   git clone https://github.com/yourusername/Instagram-Clone.git
    cd InstaDebo
    ```
 
@@ -37,9 +37,12 @@ It allows users to **upload photos, like, comment, follow/unfollow, update profi
 
 3. Set up environment variables in a `.env` file:
    ```sh
-   MONGO_URI=your_mongo_db_connection_string
-   JWT_SECRET=your_jwt_secret
-   FIREBASE_API_KEY=your_firebase_api_key
+   MONGODB_URI=your mongo uri
+   PORT=8000
+   JWT_SERECT_KEY=
+   CLOUDINARY_API_KEY=
+   CLOUDINARY_API_SECRET=
+   CLOUDINARY_CLOUD_NAME=
    ```
 
 4. Start the development server:
@@ -47,11 +50,11 @@ It allows users to **upload photos, like, comment, follow/unfollow, update profi
    npm run dev
    ```
 
-## ðŸŒ Live Demo:
+## Live Demo:
 [Click here to view the live project](#)
 
-## ðŸ¤ Contributing
+## Contributing
 Feel free to open issues or create pull requests to improve this project!
 
-## ðŸ“œ License
+## License
 This project is open-source and available under the MIT License.
