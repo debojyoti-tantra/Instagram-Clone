@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
    cors: {
-      origin: ['https://shiny-happiness-5g4g7rjg4jjj2v77g-8000.app.github.dev'],
+      origin: ['https://instadebo.onrender.com'],
       methods: ['GET', 'POST'],
    },
 });
