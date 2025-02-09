@@ -24,7 +24,7 @@ export default function ChatPage() {
    
    const sendMessageHandler = async (reciverId) => {
       try {
-         const res = await axios.post(`http://localhost:8000/api/v1/message/send/${reciverId}`, { textMessage }, {
+         const res = await axios.post(`/api/v1/message/send/${reciverId}`, { textMessage }, {
             headers:{
                'Content-Type':'application/json'
             },
@@ -98,7 +98,7 @@ export default function ChatPage() {
                </div>
             </div>
             
-            <div className="flex- bg-gray-700 p-4 my-4 rounded-md overflow-y-auto">
+            <div className="bg-gray-700 p-4 my-4 rounded-md overflow-y-auto">
                <Messages chatSelectedUser={chatSelectedUser} />
             </div>
             

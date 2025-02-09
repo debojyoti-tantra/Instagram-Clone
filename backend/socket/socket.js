@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
    cors: {
-      origin: ['http://localhost:5173'],
+      origin: ['https://shiny-happiness-5g4g7rjg4jjj2v77g-8000.app.github.dev'],
       methods: ['GET', 'POST'],
    },
 });

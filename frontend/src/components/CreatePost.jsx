@@ -51,7 +51,7 @@ export default function  CreatePost({open, setOpen})  {
       
       try {
          setLoading(true);
-         const res = await axios.post("http://localhost:8000/api/v1/post/addPost", formData, {
+         const res = await axios.post("/api/v1/post/addPost", formData, {
             headers: {
                'Content-Type': 'multipart/form-data'
             },

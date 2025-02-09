@@ -28,7 +28,7 @@ export default function  Messages({chatSelectedUser})  {
             <NavLink to={`/profile/${chatSelectedUser.username}`} className="mt-1"><Button>View Profile</Button></NavLink>
          </div>
          
-         <div className="h-[22vh] sm:h-[25vh]">
+         <div className="h-[30vh] sm:h-[25vh]">
             {
                messages && messages.map((msg) => {
                   return <div ref={scroll} className={`flex ${user._id===msg.senderId ? 'justify-end' : 'justyfy-start'}`}>

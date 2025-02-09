@@ -26,7 +26,7 @@ export default function  FollowersDialog({followingsDialogOpen, setFollowingsDia
    useEffect(() => {  
       const getFollowing = async () => {
          try {
-            const res = await axios.get(`http://localhost:8000/api/v1/user/${userProfile?._id}/following`, { withCredentials: true });
+            const res = await axios.get(`/api/v1/user/${userProfile?._id}/following`, { withCredentials: true });
             if (res.data.success) {
                setFollowing(res.data.following);
             }

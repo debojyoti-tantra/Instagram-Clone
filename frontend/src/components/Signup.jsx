@@ -34,7 +34,7 @@ export default function Signup() {
       e.preventDefault();
       try {
          setLoading(true);
-         const res = await axios.post('http://localhost:8000/api/v1/user/register', input, {
+         const res = await axios.post('/api/v1/user/register', input, {
             header:{
                'Content-Type': 'application/json'
             },
