@@ -26,7 +26,7 @@ export default function  FollowersDialog({followersDialogOpen, setFollowersDialo
    useEffect(() => {  
       const getFollowers = async () => {
          try {
-            const res = await axios.get(`/api/v1/user/${userProfile?._id}/followers`, { withCredentials: true });
+            const res = await axios.get(`https://instadebo.onrender.com/api/v1/user/${userProfile?._id}/followers`, { withCredentials: true });
             if (res.data.success) {
                setFollowers(res.data.followers);
             }
