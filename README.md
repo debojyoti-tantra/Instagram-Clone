@@ -1,14 +1,15 @@
 # InstaDebo Instagram Clone (MERN Stack)
 
 InstaDebo is a full-featured **Instagram clone** built with the **MERN stack (MongoDB, Express, React, Node.js)**. 
-It allows users to **upload photos, like, comment, follow/unfollow, update profiles, and explore posts**â€”all in a seamless social media experience.
+It allows users to **upload photos, like, comment, follow/unfollow, update profiles, explore posts and chats with friends** all in a seamless social media experience.
 
 ## Features:
-- User authentication (JWT & Firebase)
+- User authentication (JWT & bcryptjs)
 - Profile updates (profile picture, bio, etc.)
 - Post creation, likes & comments
 - Follow/unfollow system
 - Real-time updates with Socket.IO
+- Chat with friends
 - Responsive & modern UI
 
 ## Screenshots:
@@ -19,7 +20,7 @@ It allows users to **upload photos, like, comment, follow/unfollow, update profi
 - Express.js (Backend framework)
 - React.js (Frontend framework)
 - Node.js (Backend runtime)
-- Firebase (For profile image storage)
+- cloudinary (For profile image storage)
 - Socket.IO (For real-time updates)
 - Tailwind CSS (For UI styling)
 
@@ -27,17 +28,17 @@ It allows users to **upload photos, like, comment, follow/unfollow, update profi
 1. Clone the repository:
    ```sh
    git clone https://github.com/yourusername/Instagram-Clone.git
-   cd InstaDebo
+   cd Instagram-Clone
    ```
 
 2. Install dependencies:
    ```sh
-   npm install
+   npm run build
    ```
 
 3. Set up environment variables in a `.env` file:
    ```sh
-   MONGODB_URI=your mongo uri
+   MONGODB_URI=
    PORT=8000
    JWT_SERECT_KEY=
    CLOUDINARY_API_KEY=
@@ -49,9 +50,13 @@ It allows users to **upload photos, like, comment, follow/unfollow, update profi
    ```sh
    npm run dev
    ```
+   or
+   ```sh
+   npm run start
+   ```
 
 ## Live Demo:
-[Click here to view the live project](#)
+[Click here to view the live project](https://instadebo.onrender.com)
 
 ## Contributing
 Feel free to open issues or create pull requests to improve this project!
