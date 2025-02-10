@@ -6,13 +6,15 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'sonner';
 import { setAuthUser } from '../redux/authSlice.js';
+import { readFileAsDataURL } from '@/lib/utils.js';
 
 export default function EditProfile() {
    const imageRef = useRef();
    const dispatch = useDispatch();
    const navigate = useNavigate();
    const { user } = useSelector((store) => store.auth);
-   
+
+   const [imagePreview, setImagePreview] = useState("");
    const [loading, setLoading] = useState(false);
    const [input, setInput] = useState({
       profilePicture: user?.profilePicture,
@@ -20,10 +22,12 @@ export default function EditProfile() {
       gender: user?.gender
    });
    
-   const handleProfilePictureChange = (e) => {
+   const handleProfilePictureChange = async (e) => {
       const file = e.target.files[0];
       if (file) {
          setInput({...input, profilePicture:file});
+         const dataUrl = await readFileAsDataURL(file);
+         setImagePreview(dataUrl);
       }
    };
 
@@ -72,7 +76,7 @@ export default function EditProfile() {
          {/* Profile Picture */}
          <div className="flex gap-4 items-center gap-6 mb-5 bg-slate-800 p-2 rounded">
             <img
-               src={input?.profilePicture || "https://w7.pngwing.com/pngs/247/564/png-transparent-computer-icons-user-profile-user-avatar-blue-heroes-electric-blue.png"}
+               src={imagePreview || input?.profilePicture || "https://w7.pngwing.com/pngs/247/564/png-transparent-computer-icons-user-profile-user-avatar-blue-heroes-electric-blue.png"}
                alt="Profile"
                className="w-28 h-28 rounded-full border-4 border-gray-700 hover:opacity-80 object-cover"
             />
