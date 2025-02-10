@@ -98,7 +98,10 @@ export default function EditProfile() {
 
          {/* Gender Selection */}
          <div className="mb-5">
-            <label className="block text-gray-400 text-sm mb-1">Gender</label>
+            <label className="block text-gray-400 text-sm mb-1 flex items-center gap-1">
+               <p>Gender</p>
+               <p className="text-red-500 text-xs">* Mandatory *</p>
+            </label>
             <select
                value={input?.gender}
                onChange={(e) => setInput({...input, gender:e.target.value})}
